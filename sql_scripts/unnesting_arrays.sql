@@ -1,3 +1,12 @@
+/*
+    This code is from an actual business-case where we need to access data stored in nested arrays.
+    The number of nested arrays may vary; this trick is a neat programmatic way of unnesting arrays by 
+    pivoting them into rows. 
+
+    Because the arrays are very large, they're stored as string fields instead of SUPER types in Redshift PSQL.
+*/
+
+
 --Creating "numbers_array" utility
 drop table num_array;
 create temporary table if not exists num_array
